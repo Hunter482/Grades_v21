@@ -19,8 +19,7 @@ struct Notenkasten: View {
         ZStack{
             RoundedRectangle(cornerRadius: 27.54)
                 .frame(height: 70)
-                .foregroundColor(.black)
-                .opacity(0.65)
+                .foregroundColor(Color("darkgray"))
             HStack{
                 
                 Text(gettestartenString(testart:testtyp))
@@ -37,7 +36,7 @@ struct Notenkasten: View {
                     .padding(.trailing, 20)
                 
             }
-        }.frame(width: 330)
+        }
     }
 }
 

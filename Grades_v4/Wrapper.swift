@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
+
 
 struct Wrapper: View {
+    
+    @Environment(\.modelContext) private var modelContext
     
     @StateObject var storage: storageclass = storageclass()
     
@@ -17,9 +21,10 @@ struct Wrapper: View {
             ContentView(storage: storage)
         case .fach:
             FachView(storage: storage)
-        case .addfach:
-            
+        case .startscreen:
+            startsreen(storage: storage)
         }
+            .modelContext(modelContext)
     }
 }
 
